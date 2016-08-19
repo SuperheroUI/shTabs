@@ -16,6 +16,10 @@ class ShTabs extends React.Component {
 
     selectTab(index) {
         return () => {
+            if (this.props.onChange) {
+                this.props.onChange(this.state.currentTab, index);
+            }
+
             this.setState({
                 currentTab: index
             });
@@ -87,6 +91,7 @@ class ShTabs extends React.Component {
     }
 
     render() {
+        //noinspection JSUnusedLocalSymbols
         let {
             tabs,
             type,
@@ -94,12 +99,11 @@ class ShTabs extends React.Component {
             ...other
         } = this.props;
 
-        let tabElements; {
-            if (type === 'card') {
-                tabElements = this.generateCard(tabs);
-            } else {
-                tabElements = this.generateStandard(tabs);
-            }
+        let tabElements;
+        if (type === 'card') {
+            tabElements = this.generateCard(tabs);
+        } else {
+            tabElements = this.generateStandard(tabs);
         }
 
         return (
