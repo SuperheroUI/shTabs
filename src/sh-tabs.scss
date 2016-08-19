@@ -1,0 +1,17 @@
+@import '../node_modules/sh-core/src/base';
+
+.sh-tabs {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    .sh-tabs-wrapper {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    @import 'sh-tabs-standard';
+    @import 'sh-tabs-card';
+}
