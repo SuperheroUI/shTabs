@@ -1,0 +1,60 @@
+@import '../node_modules/sh-core/src/base';
+
+.type-standard {
+    .sh-tab-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 100%;
+
+        font-size: $size-font2;
+        font-weight: $font-weight-bold;
+        color: $color-font;
+        text-align: right;
+        line-height: 25px;
+
+        .sh-tab {
+            display: inline-block;
+            margin-left: 20px;
+
+            opacity: .4;
+            cursor: pointer;
+
+            transition: opacity $transition;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .sh-tab-content {
+        position: absolute;
+        top: 35px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        .sh-tab {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: opacity $transition, visibility 0s $time-transition;
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+
+                transition: opacity $transition, visibility 0s;
+            }
+        }
+
+    }
+}

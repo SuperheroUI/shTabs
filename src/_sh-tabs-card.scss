@@ -1,0 +1,113 @@
+@import '../node_modules/sh-core/src/base';
+
+.type-card {
+    .sh-tab {
+        position: absolute;
+        display: block;
+        border-top: solid 3px white;
+        bottom: 0;
+        overflow: hidden;
+
+        transition: z-index $transition,
+        top $transition,
+        left $transition,
+        right $transition,
+        bottom $transition,
+        border $transition,
+        height $transition,
+        opacity $transition;
+
+        &.position-0 {
+            top: 54px;
+            left: 0;
+            right: 0;
+
+            border-top: solid 3px white;
+            opacity: 1;
+            z-index: 120;
+
+            .sh-tab-header {
+                padding: 20px 30px;
+                font-size: $size-font3;
+                opacity: 1;
+                cursor: default;
+            }
+
+            .sh-tab-content {
+                height: calc(100% - 58px);
+                opacity: 1;
+            }
+        }
+
+        &.position-1 {
+            top: 24px;
+            left: 50px;
+            right: 50px;
+
+            border-top: solid 2px white;
+            opacity: .3;
+            z-index: 110;
+
+            .sh-tab-header {
+                padding: 8px 20px 6px 20px;
+                font-size: $size-font;
+                opacity: 1;
+            }
+
+            .sh-tab-content {
+                height: calc(100% - 28px);
+                opacity: 0;
+            }
+        }
+
+        &.position-2 {
+            top: 0;
+            left: 100px;
+            right: 100px;
+
+            border-top: solid 1px white;
+            opacity: .2;
+            z-index: 100;
+
+            .sh-tab-header {
+                padding: 6px 15px 4px 15px;
+                font-size: $size-font-small;
+                opacity: 1;
+            }
+
+            .sh-tab-content {
+                height: calc(100% - 22px);
+                opacity: 0;
+            }
+        }
+
+        .sh-tab-header {
+            position: relative;
+            display: block;
+
+            font-size: $size-font3;
+            font-weight: $font-weight-bold;
+            color: $color-font;
+            background: $color-box-background4;
+            text-transform: uppercase;
+
+            cursor: pointer;
+
+            transition: padding $transition, font-size $transition;
+
+        }
+
+        .sh-tab-content {
+            display: block;
+            box-sizing: border-box;
+
+            background: $color-box-background4;
+            padding: 0 30px 20px;
+            height: 100%;
+            opacity: 1;
+
+            transition: opacity $transition;
+        }
+
+    }
+}
