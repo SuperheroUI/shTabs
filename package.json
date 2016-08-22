@@ -6,8 +6,9 @@
   "scripts": {
     "clean": "rm -r ./bin",
     "test": "./node_modules/.bin/karma start",
-    "build": "./node_modules/.bin/webpack -d --config webpack.config.js",
+    "test-watch": "./node_modules/.bin/karma start --no-single-run",
     "coveralls": "./node_modules/.bin/coveralls < ./bin/coverage/lcov/lcov.info",
+    "build": "./node_modules/.bin/webpack -d --config webpack.config.js",
     "dev": "./node_modules/.bin/webpack -d --watch --config webpack.config.js",
     "example": "./node_modules/.bin/webpack -d --watch --config webpack.example.config.js"
   },
