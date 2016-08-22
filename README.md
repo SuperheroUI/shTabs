@@ -1,4 +1,4 @@
-# SuperheroUI [![Build Status](https://travis-ci.org/SuperheroUI/shTabs.svg?branch=master)](https://travis-ci.org/SuperheroUI/shTabs)
+# SuperheroUI [![Build Status](https://travis-ci.org/SuperheroUI/shTabs.svg?branch=master)](https://travis-ci.org/SuperheroUI/shTabs) [![Coverage Status](https://coveralls.io/repos/github/SuperheroUI/shTabs/badge.svg)](https://coveralls.io/github/SuperheroUI/shTabs)
 InsideSales.com React UI
 
 ## ShTabs
