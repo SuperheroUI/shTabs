@@ -16,7 +16,7 @@ module.exports = function(config) {
 
             reporters: [
                 { type: 'text-summary' },
-                { type: 'html', subdir: 'html' }
+                { type: 'lcov', subdir: 'lcov' }
             ]
         },
         webpack: {
