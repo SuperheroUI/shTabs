@@ -39,7 +39,7 @@ module.exports = function(config) {
                 ],
                 preLoaders: [
                     {
-                        test: /\.jsx?$/,
+                        test: /^((?!\.spec\.).)*\.jsx?$/,
                         loader: 'isparta',
                         include: path.join(__dirname, 'src')
                     }

@@ -16,6 +16,10 @@ class ShTabs extends React.Component {
 
     selectTab(index) {
         return () => {
+            if (this.state.currentTab === index) {
+                return;
+            }
+
             if (this.props.onChange) {
                 this.props.onChange(this.state.currentTab, index);
             }
