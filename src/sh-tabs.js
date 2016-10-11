@@ -14,6 +14,11 @@ class ShTabs extends React.Component {
         this.selectTab = this.selectTab.bind(this);
     }
 
+    componentDidMount() {
+        const { afterFirstRender } = this.props;
+        if (afterFirstRender) { afterFirstRender(); }
+    }
+
     selectTab(index) {
         return () => {
             if (this.state.currentTab === index) {
@@ -100,6 +105,7 @@ class ShTabs extends React.Component {
             tabs,
             type,
             onChange,
+            afterFirstRender,
             ...other
         } = this.props;
 
@@ -119,13 +125,15 @@ class ShTabs extends React.Component {
 ShTabs.propTypes = {
     tabs: React.PropTypes.array.isRequired,
     type: React.PropTypes.oneOf(['standard', 'card']),
-    onChange: React.PropTypes.func
+    onChange: React.PropTypes.func,
+    afterFirstRender: React.PropTypes.func
 };
 
 ShTabs.defaultProps = {
     tabs: [],
     type: 'standard',
-    onChange: _.noop
+    onChange: _.noop,
+    afterFirstRender: _.noop
 };
 
 export default ShTabs;
