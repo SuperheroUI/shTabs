@@ -15,8 +15,10 @@ class ShTabs extends React.Component {
     }
 
     componentDidMount() {
-        const { afterFirstRender } = this.props;
-        if (afterFirstRender) { afterFirstRender(); }
+        const {afterFirstRender} = this.props;
+        if (afterFirstRender) {
+            afterFirstRender();
+        }
     }
 
     selectTab(index) {
@@ -68,7 +70,8 @@ class ShTabs extends React.Component {
             };
 
             return (
-                <div key={index} className={sh.getClassNames(classNames)} onClick={this.selectTab(index)}>{tabDetails.header}</div>
+                <div key={index} className={sh.getClassNames(classNames)}
+                     onClick={this.selectTab(index)}>{tabDetails.header}</div>
             )
         });
 
@@ -83,7 +86,8 @@ class ShTabs extends React.Component {
             };
 
             return (
-                <div key={index} className={sh.getClassNames(classNames)} onClick={this.selectTab(index)}>{tabDetails.content}</div>
+                <div key={index} className={sh.getClassNames(classNames)}
+                     onClick={this.selectTab(index)}>{tabDetails.content}</div>
             )
         });
 
