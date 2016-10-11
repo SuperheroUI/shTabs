@@ -151,6 +151,22 @@ describe('ShTabs', function() {
             expect(tabOld1).toBe(0);
             expect(tabNew1).toBe(1);
         });
+
+        it('calls afterFirstRender prop on mount', function() {
+            let tabs = [
+                {header: 'header1', content: 'content1'},
+                {header: <div>header2</div>, content: <div>content2</div>},
+            ];
+            let props = {
+                afterFirstRender: function() {}
+            };
+
+            spyOn(props, 'afterFirstRender');
+
+            TestUtils.renderIntoDocument(<ShTabs type="standard" tabs={tabs} afterFirstRender={props.afterFirstRender} />);
+
+            expect(props.afterFirstRender).toHaveBeenCalledWith();
+        });
     });
 
     describe('type:card', () => {
