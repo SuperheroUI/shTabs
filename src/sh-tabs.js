@@ -122,7 +122,7 @@ class ShTabs extends React.Component {
     }
 }
 
-ShTabs.PropTypes = {
+ShTabs.propTypes = {
     tabs: React.PropTypes.array.isRequired,
     type: React.PropTypes.oneOf(['standard', 'card']),
     onChange: React.PropTypes.func,
