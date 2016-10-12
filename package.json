@@ -1,6 +1,6 @@
 {
   "name": "sh-tabs",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Create a series of tabs to navigate between",
   "main": "bin/sh-tabs.js",
   "scripts": {
